@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "267303809196",
+    "firebase_url": "https://tenderfromasst.firebaseio.com",
+    "project_id": "tenderfromasst",
+    "storage_bucket": "tenderfromasst.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:267303809196:android:76b37c3067c4396c436f09",
+        "android_client_info": {
+          "package_name": "com.example.tendertest1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "267303809196-jp7ppdsh5qegahf55oehsbukk4432egj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.tendertest1",
+            "certificate_hash": "92dcb9bcc619c056c0999394efdf2312713cc166"
+          }
+        },
+        {
+          "client_id": "267303809196-4ejnrh9fi456uho91djuoq83eje6qk32.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRppi7wxogFdzg7IseAVR2rO0iSfbNvHM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "267303809196-4ejnrh9fi456uho91djuoq83eje6qk32.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

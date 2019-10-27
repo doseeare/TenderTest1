@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/imageViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="256dp"
+            android:background="#000"
+            android:maxHeight="356dp"
+            android:minHeight="256dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.viewpagerindicator.CirclePageIndicator
+            android:id="@+id/indicator"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="bottom"
+            android:padding="10dip"
+            app:centered="true"
+            app:fillColor="#5f2c82"
+            app:layout_constraintBottom_toBottomOf="@id/imageViewPager"
+            app:layout_constraintStart_toStartOf="@id/imageViewPager"
+            app:pageColor="#fff"
+            app:snap="false" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/marginDef"
+            android:layout_marginLeft="@dimen/marginHorizontal"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="@dimen/marginHorizontal"
+            app:layout_constraintTop_toBottomOf="@id/imageViewPager">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingBottom="15dp">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/cardviewMargin"
+                    android:layout_marginBottom="@dimen/cardviewMargin"
+                    android:elevation="@dimen/elevetion">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/openedHorizontal"
+                            android:paddingTop="10dp"
+                            android:paddingEnd="10dp"
+                            android:paddingRight="@dimen/openedHorizontal"
+                            android:text="Закупающая организация"
+                            android:textSize="@dimen/tittleSize"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <View
+                            android:id="@+id/view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginRight="12dp"
+                            android:background="#808080"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/textview" />
+
+                        <TextView
+                            android:id="@+id/name_company"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/openedHorizontal"
+                            android:paddingTop="4dp"
+                            android:paddingEnd="10dp"
+                            android:paddingRight="@dimen/openedHorizontal"
+                            android:paddingBottom="@dimen/cardviewMargin"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/view"
+                            tools:text="ОсОО USAID КР" />
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/cardviewMargin"
+
+                    android:layout_marginBottom="@dimen/cardviewMargin"
+                    android:elevation="@dimen/elevetion">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/secondTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/openedHorizontal"
+                            android:paddingTop="10dp"
+                            android:paddingEnd="10dp"
+                            android:paddingRight="@dimen/openedHorizontal"
+                            android:text="Планируемая сумма"
+                            android:textSize="@dimen/tittleSize"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginRight="12dp"
+                            android:background="#808080"
+                            app:layout_constraintTop_toBottomOf="@id/secondTextView" />
+
+                        <TextView
+                            android:id="@+id/cost"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/openedHorizontal"
+                            android:paddingTop="4dp"
+                            android:paddingEnd="10dp"
+                            android:paddingRight="@dimen/openedHorizontal"
+                            android:paddingBottom="@dimen/cardviewMargin"
+                            tools:text="170 000 сом" />
+
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/cardviewMargin"
+                    android:layout_marginBottom="@dimen/cardviewMargin"
+                    android:elevation="@dimen/elevetion">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/openedHorizontal"
+                            android:paddingTop="10dp"
+                            android:paddingEnd="10dp"
+                            android:paddingRight="@dimen/openedHorizontal"
+                            android:text="Цель закупа"
+                            android:textSize="@dimen/tittleSize"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginRight="12dp"
+                            android:background="#808080" />
+
+                        <TextView
+                            android:id="@+id/tittle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/openedHorizontal"
+                            android:paddingTop="4dp"
+                            android:paddingEnd="10dp"
+                            android:paddingRight="@dimen/openedHorizontal"
+                            android:paddingBottom="@dimen/cardviewMargin"
+                            tools:text="бла бла бла ба " />
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/cardviewMargin"
+                    android:layout_marginBottom="@dimen/cardviewMargin"
+                    android:elevation="@dimen/elevetion">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/openedHorizontal"
+                            android:paddingTop="10dp"
+                            android:paddingEnd="10dp"
+                            android:paddingRight="@dimen/openedHorizontal"
+                            android:text="Категория закупки"
+                            android:textSize="@dimen/tittleSize"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginRight="12dp"
+                            android:background="#808080" />
+
+                        <TextView
+                            android:id="@+id/category"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/openedHorizontal"
+                            android:paddingTop="4dp"
+                            android:paddingEnd="10dp"
+                            android:paddingRight="@dimen/openedHorizontal"
+                            android:paddingBottom="@dimen/cardviewMargin"
+                            tools:text="Закуп техники" />
+
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/cardviewMargin"
+                    android:layout_marginBottom="@dimen/cardviewMargin"
+                    android:elevation="@dimen/elevetion">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/openedHorizontal"
+                            android:paddingTop="10dp"
+                            android:paddingEnd="10dp"
+                            android:paddingRight="@dimen/openedHorizontal"
+                            android:text="Выбор предаставляющих"
+                            android:textSize="@dimen/tittleSize"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginRight="12dp"
+                            android:background="#808080" />
+
+                        <TextView
+                            android:id="@+id/contentEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/openedHorizontal"
+                            android:paddingTop="4dp"
+                            android:paddingEnd="10dp"
+                            android:paddingRight="@dimen/openedHorizontal"
+                            android:paddingBottom="@dimen/cardviewMargin"
+                            tools:text="вы должны бла бла бла" />
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/cardviewMargin"
+                    android:layout_marginBottom="@dimen/cardviewMargin"
+                    android:elevation="@dimen/elevetion">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/openedHorizontal"
+                            android:paddingTop="10dp"
+                            android:paddingEnd="10dp"
+                            android:paddingRight="@dimen/openedHorizontal"
+                            android:text="Дата начало закупа"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginRight="12dp"
+                            android:background="#808080" />
+
+                        <TextView
+                            android:id="@+id/relizedate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/openedHorizontal"
+                            android:paddingTop="4dp"
+                            android:paddingEnd="10dp"
+                            android:paddingRight="@dimen/openedHorizontal"
+                            android:paddingBottom="@dimen/cardviewMargin"
+                            tools:text="12.42.15" />
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/cardviewMargin"
+                    android:layout_marginBottom="@dimen/cardviewMargin"
+                    android:elevation="@dimen/elevetion">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/openedHorizontal"
+                            android:paddingTop="10dp"
+                            android:paddingEnd="10dp"
+                            android:paddingRight="@dimen/openedHorizontal"
+                            android:text="Дата окончания закупа"
+                            android:textSize="@dimen/tittleSize"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginRight="12dp"
+                            android:background="#808080" />
+
+
+                        <TextView
+                            android:id="@+id/finishdate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/openedHorizontal"
+                            android:paddingTop="4dp"
+                            android:paddingEnd="10dp"
+                            android:paddingRight="@dimen/openedHorizontal"
+                            android:paddingBottom="@dimen/cardviewMargin"
+                            tools:text="12.11.21" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/cardviewMargin"
+                    android:layout_marginBottom="@dimen/cardviewMargin"
+                    android:elevation="@dimen/elevetion">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/openedHorizontal"
+                            android:paddingTop="10dp"
+                            android:paddingEnd="10dp"
+                            android:paddingRight="@dimen/openedHorizontal"
+                            android:text="Адресс организации"
+                            android:textSize="@dimen/tittleSize"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginRight="12dp"
+                            android:background="#808080" />
+
+                        <TextView
+                            android:id="@+id/adress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/openedHorizontal"
+                            android:paddingTop="4dp"
+                            android:paddingEnd="10dp"
+                            android:paddingRight="@dimen/openedHorizontal"
+                            android:paddingBottom="@dimen/cardviewMargin"
+
+                            tools:text="Примерный ул 53" />
+
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/cardviewMargin"
+                    android:layout_marginBottom="@dimen/cardviewMargin"
+                    android:elevation="@dimen/elevetion">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="6dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/openedHorizontal"
+                            android:paddingTop="10dp"
+                            android:paddingEnd="10dp"
+                            android:paddingRight="@dimen/openedHorizontal"
+                            android:text="Номер организации"
+                            android:textSize="@dimen/tittleSize"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginRight="12dp"
+                            android:background="#808080" />
+
+                        <TextView
+                            android:id="@+id/numberphone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:paddingLeft="@dimen/openedHorizontal"
+                            android:paddingTop="4dp"
+                            android:paddingEnd="10dp"
+                            android:paddingRight="@dimen/openedHorizontal"
+                            android:paddingBottom="@dimen/cardviewMargin"
+                            tools:text="9962231512" />
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

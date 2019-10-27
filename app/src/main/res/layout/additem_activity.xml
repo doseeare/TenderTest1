@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/add_toolbar"
+        layout="@layout/custom_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/addButton"
+        app:layout_constraintTop_toBottomOf="@id/add_toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/marginHorizontal"
+            android:layout_marginTop="@dimen/marginDef"
+            android:layout_marginRight="@dimen/marginHorizontal"
+            android:layout_marginBottom="@dimen/marginDef"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/cardviewMargin"
+                android:layout_marginBottom="@dimen/cardviewMargin"
+                android:elevation="@dimen/elevetion">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/add_recyclerView"
+                        android:layout_width="match_parent"
+                        android:onClick="openFileChooser"
+                        android:layout_height="256dp"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:listitem="@layout/add_photo_item" />
+
+
+                </android.support.constraint.ConstraintLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/cardviewMargin"
+                android:layout_marginBottom="@dimen/cardviewMargin"
+                android:elevation="@dimen/elevetion">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/textPadding"
+                        android:paddingTop="@dimen/textPadding"
+                        android:paddingEnd="@dimen/textPadding"
+                        android:paddingRight="@dimen/textPadding"
+                        android:text="Закупающая организация"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:id="@+id/view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="12dp"
+                        android:background="#808080"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <EditText
+                        android:id="@+id/name_companyEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/editTextHint"
+                        android:inputType="text"
+                        android:paddingStart="@dimen/textPadding"
+                        android:paddingLeft="@dimen/textPadding"
+                        android:paddingTop="@dimen/textPadding"
+                        android:paddingEnd="@dimen/textPadding"
+                        android:paddingRight="@dimen/textPadding"
+                        android:textSize="@dimen/editTextSize" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/cardviewMargin"
+                android:layout_marginBottom="@dimen/cardviewMargin"
+                android:elevation="@dimen/elevetion">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/textPadding"
+                        android:paddingTop="@dimen/textPadding"
+                        android:paddingEnd="@dimen/textPadding"
+                        android:paddingRight="@dimen/textPadding"
+                        android:text="Адрес организации"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="12dp"
+                        android:background="#808080"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <EditText
+                        android:id="@+id/adresEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/editTextHint"
+                        android:inputType="text"
+                        android:paddingStart="@dimen/textPadding"
+                        android:paddingLeft="@dimen/textPadding"
+                        android:paddingTop="@dimen/textPadding"
+                        android:paddingEnd="@dimen/textPadding"
+                        android:paddingRight="@dimen/textPadding"
+                        android:textSize="@dimen/editTextSize" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/cardviewMargin"
+                android:layout_marginBottom="@dimen/cardviewMargin"
+                android:elevation="@dimen/elevetion">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/textPadding"
+                        android:paddingTop="@dimen/textPadding"
+                        android:paddingEnd="@dimen/textPadding"
+                        android:paddingRight="@dimen/textPadding"
+                        android:text="Номер организации"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="12dp"
+                        android:background="#808080"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <EditText
+                        android:id="@+id/numberphoneEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/editTextHint"
+                        android:inputType="number"
+                        android:paddingStart="@dimen/textPadding"
+                        android:paddingLeft="@dimen/textPadding"
+                        android:paddingTop="@dimen/textPadding"
+                        android:paddingEnd="@dimen/textPadding"
+                        android:paddingRight="@dimen/textPadding"
+                        android:textSize="@dimen/editTextSize" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/cardviewMargin"
+                android:layout_marginBottom="@dimen/cardviewMargin"
+                android:elevation="@dimen/elevetion">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/textPadding"
+                        android:paddingTop="@dimen/textPadding"
+                        android:paddingEnd="@dimen/textPadding"
+                        android:paddingRight="@dimen/textPadding"
+                        android:text="Категория закупки"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="12dp"
+                        android:background="#808080"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <EditText
+                        android:id="@+id/categoryEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/editTextHint"
+                        android:inputType="text"
+                        android:paddingStart="@dimen/textPadding"
+                        android:paddingLeft="@dimen/textPadding"
+                        android:paddingTop="@dimen/textPadding"
+                        android:paddingEnd="@dimen/textPadding"
+                        android:paddingRight="@dimen/textPadding"
+                        android:textSize="@dimen/editTextSize" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/cardviewMargin"
+                android:layout_marginBottom="@dimen/cardviewMargin"
+                android:elevation="@dimen/elevetion">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/textPadding"
+                        android:paddingTop="@dimen/textPadding"
+                        android:paddingEnd="@dimen/textPadding"
+                        android:paddingRight="@dimen/textPadding"
+                        android:text="Планируемая сумма"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="12dp"
+                        android:background="#808080"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <EditText
+                        android:id="@+id/costEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/editTextHint"
+                        android:paddingStart="@dimen/textPadding"
+                        android:paddingLeft="@dimen/textPadding"
+                        android:paddingTop="@dimen/textPadding"
+                        android:paddingEnd="@dimen/textPadding"
+                        android:paddingRight="@dimen/textPadding"
+                        android:textSize="@dimen/editTextSize" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/cardviewMargin"
+            android:layout_marginBottom="@dimen/cardviewMargin"
+            android:elevation="@dimen/elevetion">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/textPadding"
+                android:paddingTop="@dimen/textPadding"
+                android:paddingEnd="@dimen/textPadding"
+                android:paddingRight="@dimen/textPadding"
+                android:text="Выбор предаставляющих"
+                android:textStyle="bold" />
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="12dp"
+                android:background="#808080"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/contentEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/editTextHint"
+                android:inputType="text"
+                android:paddingStart="@dimen/textPadding"
+                android:paddingLeft="@dimen/textPadding"
+                android:paddingTop="@dimen/textPadding"
+                android:paddingEnd="@dimen/textPadding"
+                android:paddingRight="@dimen/textPadding"
+                android:textSize="@dimen/editTextSize" />
+        </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/cardviewMargin"
+            android:layout_marginBottom="@dimen/cardviewMargin"
+            android:elevation="@dimen/elevetion">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/textPadding"
+                android:paddingTop="@dimen/textPadding"
+                android:paddingEnd="@dimen/textPadding"
+                android:paddingRight="@dimen/textPadding"
+                android:text="Цель закупа"
+                android:textStyle="bold" />
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="12dp"
+                android:background="#808080"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/titleEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/editTextHint"
+                android:inputType="text"
+                android:paddingStart="@dimen/textPadding"
+                android:paddingLeft="@dimen/textPadding"
+                android:paddingTop="@dimen/textPadding"
+                android:paddingEnd="@dimen/textPadding"
+                android:paddingRight="@dimen/textPadding"
+                android:textSize="@dimen/editTextSize" />
+            android:textSize="@dimen/editTextSize" />
+        </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/cardviewMargin"
+            android:layout_marginBottom="@dimen/cardviewMargin"
+            android:elevation="@dimen/elevetion">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/textPadding"
+                android:paddingTop="@dimen/textPadding"
+                android:paddingEnd="@dimen/textPadding"
+                android:paddingRight="@dimen/textPadding"
+                android:text="Дата начало закупа"
+                android:textStyle="bold" />
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="12dp"
+                android:background="#808080"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/relizedateEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/editTextHint"
+                android:inputType="date"
+                android:paddingStart="@dimen/textPadding"
+                android:paddingLeft="@dimen/textPadding"
+                android:paddingTop="@dimen/textPadding"
+                android:paddingEnd="@dimen/textPadding"
+                android:paddingRight="@dimen/textPadding"
+                android:textSize="@dimen/editTextSize" />
+        </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/cardviewMargin"
+            android:layout_marginBottom="@dimen/cardviewMargin"
+            android:elevation="@dimen/elevetion">
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/textPadding"
+                android:paddingTop="@dimen/textPadding"
+                android:paddingEnd="@dimen/textPadding"
+                android:paddingRight="@dimen/textPadding"
+                android:text="Дата окончания закупа"
+                android:textStyle="bold" />
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="12dp"
+                android:background="#808080"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/finishDateEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:hint="@string/editTextHint"
+                android:inputType="date"
+                android:paddingStart="@dimen/textPadding"
+                android:paddingLeft="@dimen/textPadding"
+                android:paddingTop="@dimen/textPadding"
+                android:paddingEnd="@dimen/textPadding"
+                android:paddingRight="@dimen/textPadding"
+                android:textSize="@dimen/editTextSize" />
+
+        </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_margin="12dp"
+        android:background="@drawable/button_corners"
+        android:elevation="4dp"
+        android:onClick="addModel"
+        android:text="Опубликовать"
+        android:textColor="#FFF"
+        android:textSize="12sp"
+        app:layout_behavior=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,80 @@
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/marginHorizontal"
+    android:layout_marginTop="@dimen/marginDef"
+    android:layout_marginRight="@dimen/marginHorizontal"
+    android:layout_marginBottom="@dimen/marginDef"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="8dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/logotypeImageView"
+            android:layout_width="0dp"
+            android:layout_height="250dp"
+            android:background="@color/placeholder_bg"
+            app:layout_constraintBottom_toTopOf="@id/titleTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@color/placeholder_bg"
+            android:lines="1"
+            app:layout_constraintTop_toBottomOf="@id/logotypeImageView" />
+
+        <TextView
+            android:id="@+id/descriptionTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@color/placeholder_bg"
+            app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
+
+        <TextView
+            android:id="@+id/deadlineTitleTextView"
+            android:layout_width="62dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@color/placeholder_bg"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/descriptionTextView" />
+
+        <TextView
+            android:id="@+id/deadlineTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:background="@color/placeholder_bg"
+            app:layout_constraintBottom_toBottomOf="@id/deadlineTitleTextView"
+            app:layout_constraintStart_toEndOf="@id/deadlineTitleTextView"
+            app:layout_constraintTop_toTopOf="@id/deadlineTitleTextView" />
+
+        <TextView
+            android:id="@+id/costTextView"
+            android:layout_width="62dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
+            android:background="@color/placeholder_bg"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintStart_toEndOf="@+id/deadlineTextView"
+            app:layout_constraintTop_toTopOf="@+id/deadlineTextView" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.CardView>

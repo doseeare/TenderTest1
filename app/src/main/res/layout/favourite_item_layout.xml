@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/marginHorizontal"
+    android:layout_marginTop="@dimen/marginDef"
+    android:layout_marginRight="@dimen/marginHorizontal"
+    android:layout_marginBottom="@dimen/marginDef"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="8dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <com.example.tendertest1.custom.SquareImageView
+            android:id="@+id/logotypeImageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:background="#000" />
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:lines="1"
+            android:textColor="#5f2c82"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/logotypeImageView"
+            tools:text="ТОВАРЫ \ УПРОЩЕННЫЙ" />
+
+        <TextView
+            android:id="@+id/descriptionTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:lines="2"
+            android:textSize="@dimen/smalTextSize"
+            app:layout_constraintTop_toBottomOf="@+id/titleTextView"
+            tools:text="Приобретение запасных частей для спецтехники ДМС" />
+
+        <TextView
+            android:id="@+id/deadlineTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:drawableStart="@drawable/ic_date_range_black_24dp"
+            android:drawableLeft="@drawable/ic_date_range_black_24dp"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/descriptionTextView"
+            tools:text="Срок подачи:" />
+
+        <TextView
+            android:id="@+id/deadlineTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintBottom_toBottomOf="@id/deadlineTitleTextView"
+            app:layout_constraintStart_toEndOf="@id/deadlineTitleTextView"
+            app:layout_constraintTop_toTopOf="@id/deadlineTitleTextView"
+            tools:text="25.12.19" />
+
+        <TextView
+            android:id="@+id/costTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
+            android:drawableStart="@drawable/ic_dollar"
+            android:drawableLeft="@drawable/ic_dollar"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintStart_toEndOf="@+id/deadlineTextView"
+            app:layout_constraintTop_toTopOf="@+id/deadlineTextView"
+            tools:text="300 000 $" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.CardView>

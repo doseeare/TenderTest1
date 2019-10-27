@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="marginDef">8dp</dimen>
+    <dimen name="marginHorizontal">16dp</dimen>
+    <dimen name="tittleSize">16sp</dimen>
+    <dimen name="openedHorizontal">12dp</dimen>
+    <dimen name="smalTextSize">12sp</dimen>
+    <dimen name="textPadding">10dp</dimen>
+    <dimen name="editTextSize">16dp</dimen>
+    <dimen name="cardviewMargin">6dp</dimen>
+    <dimen name="elevetion">4dp</dimen>
+</resources>
